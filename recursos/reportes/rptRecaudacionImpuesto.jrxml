@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptRecaudacionServicio" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df04abf8-3dfb-452a-9466-5247c3b18c19">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion San Vicente"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="1000"/>
+	<parameter name="TITULO_REPORTE" class="java.lang.String"/>
+	<parameter name="FECHA_INICIO" class="java.util.Date"/>
+	<parameter name="FECHA_FIN" class="java.util.Date"/>
+	<parameter name="ADMINISTRADOR" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select 'IMPUESTO RECAUDADO'as descripcion,(cast(case when sum(f.iva)is null then 0 else sum(f.iva)end as numeric(8,2))) as impuesto
+from facturas f
+where f.estado = 'A' and f.fecha_emision between  $P{FECHA_INICIO} and  $P{FECHA_FIN}]]>
+	</queryString>
+	<field name="descripcion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="descripcion"/>
+	</field>
+	<field name="impuesto" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="impuesto"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="94" splitType="Stretch">
+			<textField>
+				<reportElement x="-2" y="53" width="554" height="38" uuid="a5a54322-1d98-4a8e-ad6d-06b218564247">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TITULO_REPORTE}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="-2" y="-5" width="554" height="57" uuid="e6212778-55e6-49cb-a69c-7187513e83d8"/>
+				<imageExpression><![CDATA["recursos/img/banner.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<line>
+				<reportElement x="30" y="46" width="491" height="1" uuid="fa09d4e8-320a-42b1-b565-f0088c82ddd0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="40" y="23" width="100" height="20" uuid="3b694158-770a-4bc4-9f36-5cad24fbb4ce">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8052b59d-0a76-4967-a56f-7c84463a09ed"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="23" width="100" height="20" uuid="2ebc21d5-79d7-4a2d-bb0a-45acf5c3aa9e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="affddfc4-cb87-47db-ac6a-550b75e446b2"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MONTO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="0" width="200" height="18" uuid="e61867a7-6bdb-40a2-99d7-ffc84d9b2200">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd300993-62c4-4e52-8395-b6554141e48f"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="100" height="18" uuid="c5208c53-36dc-460b-9072-64633b57defe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc85023b-8ec4-4f07-91f0-e2ebc351fd69"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{impuesto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="104" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="60" width="553" height="44" uuid="511280c1-899e-4b62-919b-e5fbc550651b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[Calle Guayaquil  y Av.  Virg1lío  Drouet esq
+(04)  2941800- (04} 2940500  I www emutunsmosantaelena.ec 
+emuturismo-ep@hotmail com
+Santa Elena - Ecuador]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="123" splitType="Stretch">
+			<line>
+				<reportElement x="30" y="3" width="491" height="1" uuid="83504b3b-9d0b-4fd9-8981-e22e1c4dcdf7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="40" y="6" width="100" height="20" uuid="6c8c5e16-c486-44c9-ae82-14f3cc7023fc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8052b59d-0a76-4967-a56f-7c84463a09ed"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL IVA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="320" y="7" width="100" height="18" uuid="6bd1f6f8-d92a-4d0f-85a2-8d4402024c8f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc85023b-8ec4-4f07-91f0-e2ebc351fd69"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{impuesto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="181" y="37" width="200" height="1" uuid="11a3aab9-6717-436a-884b-0da1892237c6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="150" y="39" width="260" height="19" uuid="c923f490-392b-44b8-ad50-86988095807a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ADMINISTRADOR}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

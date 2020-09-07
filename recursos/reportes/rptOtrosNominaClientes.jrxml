@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptRecaudacionServicio" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df04abf8-3dfb-452a-9466-5247c3b18c19">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexion bd_san_vicente"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="1000"/>
+	<parameter name="ADMINISTRADOR" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select c.cedula_ruc,(c.nombres || ' ' || c.apellidos) as nombre, c.telefono,c.email,c.direccion
+from clientes c
+where c.estado = 'A']]>
+	</queryString>
+	<field name="cedula_ruc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cedula_ruc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="clientes"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="telefono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="clientes"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="clientes"/>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="direccion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="clientes"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="50" width="550" height="20" uuid="81d3a758-5fcc-4ede-8f04-ab8b5b597e8e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NÓMINA DE CLIENTES]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="5" y="1" width="550" height="50" uuid="2930bb36-976d-439e-bd1f-3a266740b070"/>
+				<imageExpression><![CDATA["recursos/img/banner.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="70" height="19" uuid="ac2d63d3-50b4-499e-8b0b-950dacbe1b7c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad88852f-400f-4000-b5b1-74b2d4665e17"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CÉDULA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="20" width="177" height="20" uuid="f9c3e248-fb2d-494d-8353-ec59ce4adf36">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="630625b2-1e08-4182-a47f-2c2ec56d3496"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="20" width="77" height="21" uuid="5d59828f-487f-4f3f-9b64-cc3f3855b44c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a0b25cb1-1807-4cf3-bc17-175c78d7a3f1"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELÉFONO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="20" width="76" height="19" uuid="a9712884-12be-4a52-a131-3a706f6a5475">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8af22855-b687-48c2-b1f3-caee6d4a400e"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CORREO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="20" width="144" height="19" uuid="21b14349-577a-48a9-bb0d-855e11365111">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2e38b51a-75a9-4ed6-9de6-80cd6660b869"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECCIÓN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="0b9395ca-e053-41b4-91fa-a69d24064868">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="40" width="555" height="1" uuid="2d1111d2-1d0c-4951-954f-536c5eeb232e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="1" width="70" height="15" uuid="9129a85d-7dbd-4171-a3a8-b7af18b250b7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b7e7cfc6-982b-42bb-8867-7ba18cce702e"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cedula_ruc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="1" width="177" height="15" uuid="eebf585c-423d-4e47-9cfb-ff212f27ef6a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cadd45f1-3e75-4ce0-8261-cc9934ca7781"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="1" width="77" height="15" uuid="df651f07-2bd2-447b-9ebd-ccd47afba6c7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a947fb76-6b35-4516-8725-0e51b336d9af"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="334" y="1" width="76" height="15" uuid="c60880c9-a623-492c-a2c2-8f2dba7d38c1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2b1302f-2004-463c-ae18-3a91ac0475e2"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="412" y="1" width="144" height="15" uuid="2af857ea-9b99-405d-becf-39176a2577cc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c4da6c3c-8965-43ed-9fd4-fb812fea02ca"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="17" width="555" height="1" uuid="7be8023d-4444-4d41-8d42-677f8de9546d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="104" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="60" width="553" height="44" uuid="0c14d723-6004-477c-a7ff-022886de3315"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[Calle Guayaquil  y Av.  Virg1lío  Drouet esq
+(04)  2941800- (04} 2940500  I www emutunsmosantaelena.ec 
+emuturismo-ep@hotmail com
+Santa Elena - Ecuador]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="53" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement x="181" y="19" width="200" height="1" uuid="174718a3-d9fd-435c-bfb8-d936461ed46b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="150" y="21" width="260" height="19" uuid="76153338-b57e-4636-a6cf-cbfb71c6cf20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ADMINISTRADOR}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

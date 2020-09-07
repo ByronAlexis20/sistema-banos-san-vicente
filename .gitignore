@@ -1,0 +1,7 @@
+#ignorar los directorios siguientes
+bin/
+.settings/
+.metadata/
+.classpath
+build.fxbuild
+configuracion

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="448.0" prefWidth="527.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.RepRecaudacionesC">
+   <children>
+      <Accordion layoutX="14.0" layoutY="44.0" prefHeight="366.0" prefWidth="529.0">
+        <panes>
+          <TitledPane animated="false" text="Por servicio">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rbDiarioServicio" layoutX="92.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionDiarioServicio" text="Diario" />
+                        <RadioButton fx:id="rbRangoServicio" layoutX="347.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionRangoServicio" text="Rango de fecha" />
+                        <DatePicker fx:id="dtpDiarioServicio" layoutX="22.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpInicioServicio" layoutX="312.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpFinServicio" layoutX="312.0" layoutY="95.0" />
+                        <Button fx:id="btnVisualizarDiarioServicio" layoutX="63.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirDiarioServicio" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Button fx:id="btnVisualizarRangoServicio" layoutX="344.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirRangoServicio" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Label layoutX="273.0" layoutY="57.0" text="Desde:" />
+                        <Label layoutX="273.0" layoutY="99.0" text="Hasta:" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" text="Por servicio y categorización">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rbDiarioCategoria" layoutX="92.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionDiarioCategoria" text="Diario" />
+                        <RadioButton fx:id="rbRangoCategoria" layoutX="347.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionRangoCategoria" text="Rango de fecha" />
+                        <DatePicker fx:id="dtpDiarioCategoria" layoutX="22.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpInicioRangoCategoria" layoutX="312.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpFinRangoCategoria" layoutX="312.0" layoutY="95.0" />
+                        <Button fx:id="btnVisualizarDiarioCategora" layoutX="63.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirDiarioCategoria" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Button fx:id="btnVisualizarRangoCategoria" layoutX="344.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirRangoCategoria" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Label layoutX="272.0" layoutY="57.0" text="Desde:" />
+                        <Label layoutX="272.0" layoutY="99.0" text="Hasta:" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Por usuarios generales">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rbDiarioUsuario" layoutX="92.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionDiarioUsuario" text="Diario" />
+                        <RadioButton fx:id="rbRangoUsuario" layoutX="347.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionRangoUsuario" text="Rango de fecha" />
+                        <DatePicker fx:id="dtpDiarioUsuario" layoutX="22.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpInicioRangoUsuario" layoutX="312.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpFinRangoUsuario" layoutX="312.0" layoutY="95.0" />
+                        <Button fx:id="btnVisualizarDiarioUsuario" layoutX="63.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirDiarioUsuario" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Button fx:id="btnVisualizarRangoUsuario" layoutX="344.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirRangoUsuario" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Label layoutX="272.0" layoutY="57.0" text="Desde:" />
+                        <Label layoutX="272.0" layoutY="99.0" text="Hasta:" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Numérico por servicio y categorización">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rbDiarioNumerico" layoutX="92.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionDiarioNumerico" text="Diario" />
+                        <RadioButton fx:id="rbRangoNumerico" layoutX="347.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionRangoNumerico" text="Rango de fecha" />
+                        <DatePicker fx:id="dtpDiarioNumerico" layoutX="22.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpInicioRangoNumerico" layoutX="312.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpFinRangoNumerico" layoutX="312.0" layoutY="95.0" />
+                        <Button fx:id="btnVisualizarDiarioNumerico" layoutX="63.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirDiarioNumerico" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Button fx:id="btnVisualizarRangoNumerico" layoutX="344.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirRangoNumerico" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Label layoutX="268.0" layoutY="57.0" text="Desde:" />
+                        <Label layoutX="268.0" layoutY="99.0" text="Hasta:" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Por cliente">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rbDiarioCliente" layoutX="92.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionDiarioCliente" text="Diario" />
+                        <RadioButton fx:id="rbRangoCliente" layoutX="347.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionRangoCliente" text="Rango de fecha" />
+                        <DatePicker fx:id="dtpDiarioCliente" layoutX="22.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpInicioRangoCliente" layoutX="312.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpFinRangoCliente" layoutX="312.0" layoutY="95.0" />
+                        <Button fx:id="btnVisualizarDiarioCliente" layoutX="63.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirDiarioCliente" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Button fx:id="btnVisualizarRangoCliente" layoutX="344.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirRangoCliente" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Label layoutX="275.0" layoutY="57.0" text="Desde:" />
+                        <Label layoutX="275.0" layoutY="99.0" text="Hasta:" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Documentos anulados">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rbDiarioAnulado" layoutX="92.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionDiarioAnulado" text="Diario" />
+                        <RadioButton fx:id="rbRangoAnulado" layoutX="347.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionRangoAnulado" text="Rango de fecha" />
+                        <DatePicker fx:id="dtpDiarioAnulado" layoutX="22.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpInicioRangoAnulado" layoutX="312.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpFinRangoAnulado" layoutX="312.0" layoutY="95.0" />
+                        <Button fx:id="btnVisualizarDiarioAnulado" layoutX="63.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirDiarioAnulado" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Button fx:id="btnVisualizarRangoAnulado" layoutX="344.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirRangoAnulado" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Label layoutX="273.0" layoutY="57.0" text="Desde:" />
+                        <Label layoutX="273.0" layoutY="99.0" text="Hasta:" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Impuesto recaudado">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rbDiarioImpuesto" layoutX="92.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionDiarioImpuesto" text="Diario" />
+                        <RadioButton fx:id="rbRangoImpuesto" layoutX="347.0" layoutY="23.0" mnemonicParsing="false" onAction="#seleccionRangoImpuesto" text="Rango de fecha" />
+                        <DatePicker fx:id="dtpDiarioImpuesto" layoutX="22.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpInicioRangoImpuesto" layoutX="312.0" layoutY="53.0" />
+                        <DatePicker fx:id="dtpFinRangoImpuesto" layoutX="312.0" layoutY="95.0" />
+                        <Button fx:id="btnVisualizarDiarioImpuesto" layoutX="63.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirDiarioImpuesto" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Button fx:id="btnImprimirRangoImpuesto" layoutX="344.0" layoutY="140.0" mnemonicParsing="false" onAction="#imprimirRangoImpuesto" prefHeight="25.0" prefWidth="110.0" text="Imprimir" />
+                        <Label layoutX="271.0" layoutY="57.0" text="Desde:" />
+                        <Label layoutX="272.0" layoutY="99.0" text="Hasta:" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+      <Label alignment="CENTER" layoutY="4.0" prefHeight="17.0" prefWidth="564.0" text="REPORTE DE RECAUDACIONES" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="556.0" layoutY="420.0" />
+   </children>
+</AnchorPane>

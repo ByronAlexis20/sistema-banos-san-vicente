@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="227.0" prefWidth="506.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.RepOtrosC">
+   <children>
+      <Label alignment="CENTER" layoutY="4.0" prefHeight="17.0" prefWidth="564.0" text="OTROS REPORTES" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="507.0" layoutY="210.0" />
+      <Button fx:id="btnPreciosServicios" alignment="TOP_LEFT" layoutX="86.0" layoutY="46.0" mnemonicParsing="false" onAction="#preciosServicios" prefHeight="25.0" prefWidth="393.0" text="Precio de servicios" />
+      <Button fx:id="btnNominaEmpleados" alignment="TOP_LEFT" layoutX="86.0" layoutY="87.0" mnemonicParsing="false" onAction="#nominaEmpleados" prefHeight="25.0" prefWidth="393.0" text="Nómina de empleados" />
+      <Button fx:id="btnNominaClientes" alignment="TOP_LEFT" layoutX="86.0" layoutY="128.0" mnemonicParsing="false" onAction="#nominaClientes" prefHeight="25.0" prefWidth="393.0" text="Nómina de clientes" />
+      <Button fx:id="btnServiciosDispoibles" alignment="TOP_LEFT" layoutX="86.0" layoutY="166.0" mnemonicParsing="false" onAction="#serviciosDisponibles" prefHeight="25.0" prefWidth="393.0" text="Servicios disponibles" />
+   </children>
+</AnchorPane>
