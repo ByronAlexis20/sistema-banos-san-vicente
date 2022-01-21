@@ -7,23 +7,34 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="369.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.RecRecaudacionGeneradaC">
-   <children>
-      <TableView fx:id="tvDatos" layoutX="24.0" layoutY="65.0" prefHeight="284.0" prefWidth="570.0" />
-      <HBox alignment="CENTER_LEFT" layoutX="24.0" layoutY="15.0" prefHeight="46.0" prefWidth="570.0" style="-fx-border-color: #bbc8d0; -fx-border-width: 1px; -fx-spacing: 8; -fx-background-radius: 6.0; -fx-max-height: 300">
-         <children>
-            <Button fx:id="btnImprimir" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#imprimirFactura" prefHeight="40.0" prefWidth="110.0" text="Reimprimir" textAlignment="RIGHT">
-               <HBox.margin>
-                  <Insets left="5.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="btnAnular" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#anularFactura" prefHeight="40.0" prefWidth="110.0" text="Anular" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets left="5.0" />
-               </HBox.margin>
-            </Button>
-         </children>
-      </HBox>
-      <Label layoutX="570.0" layoutY="355.0" prefHeight="17.0" prefWidth="32.0" />
-   </children>
+<AnchorPane prefHeight="369.0" prefWidth="609.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controlador.RecRecaudacionGeneradaC">
+	<children>
+		<TableView fx:id="tvDatos" layoutX="24.0" layoutY="65.0"
+			prefHeight="284.0" prefWidth="570.0" />
+		<HBox alignment="CENTER_LEFT" layoutX="24.0" layoutY="15.0"
+			prefHeight="46.0" prefWidth="570.0"
+			style="-fx-border-color: #bbc8d0; -fx-border-width: 1px; -fx-spacing: 8; -fx-background-radius: 6.0; -fx-max-height: 300">
+			<children>
+				<Button fx:id="btnImprimir" alignment="CENTER_RIGHT"
+					mnemonicParsing="false" onAction="#imprimirFactura"
+					prefHeight="40.0" prefWidth="110.0" text="Reimprimir"
+					textAlignment="RIGHT">
+					<HBox.margin>
+						<Insets left="5.0" />
+					</HBox.margin>
+				</Button>
+				<Button fx:id="btnAnular" alignment="CENTER_RIGHT"
+					mnemonicParsing="false" onAction="#anularFactura" prefHeight="40.0"
+					prefWidth="110.0" text="Anular" HBox.hgrow="ALWAYS">
+					<HBox.margin>
+						<Insets left="5.0" />
+					</HBox.margin>
+				</Button>
+			</children>
+		</HBox>
+		<Label layoutX="570.0" layoutY="355.0" prefHeight="17.0"
+			prefWidth="32.0" />
+	</children>
 </AnchorPane>

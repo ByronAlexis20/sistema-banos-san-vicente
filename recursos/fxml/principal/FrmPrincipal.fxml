@@ -5,33 +5,43 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="444.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PrincipalC">
-   <children>
-      <MenuBar layoutX="99.0" layoutY="85.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="Registros">
-            <items>
-              <MenuItem fx:id="miCargos" mnemonicParsing="false" text="Cargos" />
-                  <MenuItem fx:id="miCategoria" mnemonicParsing="false" text="Categoría" />
-                  <MenuItem fx:id="miServicios" mnemonicParsing="false" text="Servicios" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Recaudaciones">
-            <items>
-              <MenuItem fx:id="miRecaudaciones" mnemonicParsing="false" text="Recaudación" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Confiuraciones">
-            <items>
-              <MenuItem fx:id="miConfiguracion" mnemonicParsing="false" text="Configuración" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="Ayuda">
-              <items>
-                <MenuItem fx:id="miAyuda" mnemonicParsing="false" text="Action 1" />
-              </items>
-            </Menu>
-        </menus>
-      </MenuBar>
-   </children>
+<AnchorPane prefHeight="444.0" prefWidth="663.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controlador.PrincipalC">
+	<children>
+		<MenuBar layoutX="99.0" layoutY="85.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
+			<menus>
+				<Menu mnemonicParsing="false" text="Registros">
+					<items>
+						<MenuItem fx:id="miCargos" mnemonicParsing="false"
+							text="Cargos" />
+						<MenuItem fx:id="miCategoria" mnemonicParsing="false"
+							text="Categoría" />
+						<MenuItem fx:id="miServicios" mnemonicParsing="false"
+							text="Servicios" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Recaudaciones">
+					<items>
+						<MenuItem fx:id="miRecaudaciones" mnemonicParsing="false"
+							text="Recaudación" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Confiuraciones">
+					<items>
+						<MenuItem fx:id="miConfiguracion" mnemonicParsing="false"
+							text="Configuración" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Ayuda">
+					<items>
+						<MenuItem fx:id="miAyuda" mnemonicParsing="false"
+							text="Action 1" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</children>
 </AnchorPane>

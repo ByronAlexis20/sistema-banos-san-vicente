@@ -6,34 +6,46 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="274.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.AdmCargosC">
-   <children>
-      <TableView fx:id="tvDatos" layoutX="14.0" layoutY="45.0" prefHeight="207.0" prefWidth="262.0" />
-      <Button fx:id="btnGrabar" layoutX="333.0" layoutY="204.0" mnemonicParsing="false" onAction="#grabar" prefHeight="47.0" prefWidth="52.0" />
-      <Button fx:id="btnNuevo" layoutX="416.0" layoutY="204.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="47.0" prefWidth="51.0" />
-      <Label layoutX="281.0" layoutY="73.0" text="Descripción:">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <CheckBox fx:id="chkEstado" layoutX="354.0" layoutY="137.0" mnemonicParsing="false" />
-      <TextField fx:id="txtCodigo" layoutX="354.0" layoutY="41.0" />
-      <Label layoutX="493.0" layoutY="262.0" prefHeight="17.0" prefWidth="21.0" />
-      <Label layoutX="281.0" layoutY="45.0" text="Código:">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="281.0" layoutY="137.0" text="Estado:">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="262.0" text="Listado de cargos" textAlignment="CENTER">
-         <font>
-            <Font name="Arial" size="12.0" />
-         </font>
-      </Label>
-      <TextArea fx:id="txtDescripcion" layoutX="354.0" layoutY="73.0" prefHeight="57.0" prefWidth="149.0" wrapText="true" />
-   </children>
+<AnchorPane prefHeight="274.0" prefWidth="523.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controlador.AdmCargosC">
+	<children>
+		<TableView fx:id="tvDatos" layoutX="14.0" layoutY="45.0"
+			prefHeight="207.0" prefWidth="262.0" />
+		<Button fx:id="btnGrabar" layoutX="333.0" layoutY="204.0"
+			mnemonicParsing="false" onAction="#grabar" prefHeight="47.0"
+			prefWidth="52.0" />
+		<Button fx:id="btnNuevo" layoutX="416.0" layoutY="204.0"
+			mnemonicParsing="false" onAction="#nuevo" prefHeight="47.0"
+			prefWidth="51.0" />
+		<Label layoutX="281.0" layoutY="73.0" text="Descripción:">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<CheckBox fx:id="chkEstado" layoutX="354.0" layoutY="137.0"
+			mnemonicParsing="false" />
+		<TextField fx:id="txtCodigo" layoutX="354.0" layoutY="41.0" />
+		<Label layoutX="493.0" layoutY="262.0" prefHeight="17.0"
+			prefWidth="21.0" />
+		<Label layoutX="281.0" layoutY="45.0" text="Código:">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="281.0" layoutY="137.0" text="Estado:">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<Label alignment="CENTER" layoutX="14.0" layoutY="12.0"
+			prefHeight="27.0" prefWidth="262.0" text="Listado de cargos"
+			textAlignment="CENTER">
+			<font>
+				<Font name="Arial" size="12.0" />
+			</font>
+		</Label>
+		<TextArea fx:id="txtDescripcion" layoutX="354.0"
+			layoutY="73.0" prefHeight="57.0" prefWidth="149.0" wrapText="true" />
+	</children>
 </AnchorPane>

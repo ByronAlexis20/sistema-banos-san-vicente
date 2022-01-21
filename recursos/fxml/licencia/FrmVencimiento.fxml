@@ -6,14 +6,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="160.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.LicVencimientoC">
-   <children>
-      <Label alignment="TOP_LEFT" layoutX="24.0" layoutY="110.0" prefHeight="17.0" prefWidth="205.0" text="Ing. Carlos Castillo" wrapText="true" />
-      <Label fx:id="lblMensaje" layoutX="24.0" layoutY="27.0" text="Tu etapa de prueba de 100 días caducará el 10/11/2019," />
-      <Label layoutX="24.0" layoutY="44.0" text="es necesario contactarse con el proveedor, para que pueda seguir" />
-      <Label layoutX="24.0" layoutY="61.0" text="disfrutando de los beneficios del sistema." />
-      <Label layoutX="24.0" layoutY="127.0" text="Cel.: 0987838545" />
-      <ImageView fx:id="imFoto" fitHeight="80.0" fitWidth="92.0" layoutX="405.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="btnContinuar" layoutX="405.0" layoutY="115.0" mnemonicParsing="false" onAction="#continuar" prefHeight="25.0" prefWidth="92.0" text="Continuar" />
-   </children>
+<AnchorPane prefHeight="160.0" prefWidth="518.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controlador.LicVencimientoC">
+	<children>
+		<Label alignment="TOP_LEFT" layoutX="24.0" layoutY="110.0"
+			prefHeight="17.0" prefWidth="205.0" text="Ing. Carlos Castillo"
+			wrapText="true" />
+		<Label fx:id="lblMensaje" layoutX="24.0" layoutY="27.0"
+			text="Tu etapa de prueba de 100 días caducará el 10/11/2019," />
+		<Label layoutX="24.0" layoutY="44.0"
+			text="es necesario contactarse con el proveedor, para que pueda seguir" />
+		<Label layoutX="24.0" layoutY="61.0"
+			text="disfrutando de los beneficios del sistema." />
+		<Label layoutX="24.0" layoutY="127.0" text="Cel.: 0987838545" />
+		<ImageView fx:id="imFoto" fitHeight="80.0" fitWidth="92.0"
+			layoutX="405.0" layoutY="20.0" pickOnBounds="true"
+			preserveRatio="true" />
+		<Button fx:id="btnContinuar" layoutX="405.0" layoutY="115.0"
+			mnemonicParsing="false" onAction="#continuar" prefHeight="25.0"
+			prefWidth="92.0" text="Continuar" />
+	</children>
 </AnchorPane>
